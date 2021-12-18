@@ -27,7 +27,99 @@ body {
     min-height: 100vh;
     font-size: $font-size;
     font-family: $font-stack;
+    color: $very-dark-blue;
+    text-align: center;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+%mobile-margin {
+    margin: 2rem;
+    max-width: 31.25rem;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+header {
+    @extend %mobile-margin;
+
+    img {
+        margin: auto;
+        height: 1.2rem;
+    }
+}
+
+main {
+    @extend %mobile-margin;
+
+    .text {
+
+        h1 {
+            font-size: 1.5rem;
+            color: $gray;
+            font-weight: 400;
+    
+            span {
+                color: $very-dark-blue;
+                font-weight: 600;
+            }
+        }
+
+        p {
+            font-size: .9rem;
+            margin: 1rem 0;
+        }
+    }
+
+    .email {
+
+        %input-style {
+            border-radius: 1.25rem;
+            margin: .5rem;
+            padding: .7rem;
+            // width: 100%;
+            font-size: .8rem;
+        }
+
+        input:nth-of-type(1) {
+            @extend %input-style;
+            border: 1px solid $pale-blue;
+            color: $pale-blue;
+        }
+
+        input:nth-of-type(2) {
+            @extend %input-style;
+            border: none;
+            background-color: $blue;
+            color: white;
+            font-weight: 600;
+        }
+
+        .invalid {
+            border-color: $light-red;
+        }
+
+    }
+
+    img {
+        margin: 2rem 0;
+    }
+}
+
+footer {
+    @extend %mobile-margin;
+    color: $gray;
+
+    .copyright {
+        font-size: .7rem;
+    }
+
+    .attribution { 
+        margin: .5rem 0;
+        font-size: 11px; text-align: center; 
+    }
+
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}

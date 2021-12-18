@@ -19,14 +19,69 @@ body {
   min-height: 100vh;
   font-size: 20px;
   font-family: "Libre Franklin", sans-serif;
-}
-
-.attribution {
-  font-size: 11px;
+  color: #151f29;
   text-align: center;
 }
 
-.attribution a {
+footer, main, header {
+  margin: 2rem;
+  max-width: 31.25rem;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+header img {
+  margin: auto;
+  height: 1.2rem;
+}
+
+main .text h1 {
+  font-size: 1.5rem;
+  color: #969696;
+  font-weight: 400;
+}
+main .text h1 span {
+  color: #151f29;
+  font-weight: 600;
+}
+main .text p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+main .email input:nth-of-type(2), main .email input:nth-of-type(1) {
+  border-radius: 1.25rem;
+  margin: 0.5rem;
+  padding: 0.7rem;
+  font-size: 0.8rem;
+}
+main .email input:nth-of-type(1) {
+  border: 1px solid #c2d3ff;
+  color: #c2d3ff;
+}
+main .email input:nth-of-type(2) {
+  border: none;
+  background-color: #4f7df3;
+  color: white;
+  font-weight: 600;
+}
+main img {
+  margin: 2rem 0;
+}
+
+footer {
+  color: #969696;
+}
+footer .copyright {
+  font-size: 0.7rem;
+}
+footer .attribution {
+  margin: 0.5rem 0;
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
   color: #3e52a3;
 }
 
