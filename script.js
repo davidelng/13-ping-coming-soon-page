@@ -9,13 +9,14 @@ const validEmail = (email) => {
     return regex.test(String(email).toLowerCase());
 };
 
-btn.addEventListener('click', (e) => {
-    if (email.ariaValueMax.trim() == '') {
+btn.addEventListener('click', () => {
+    if (email.value.trim() == '') {
         email.classList.add('invalid');
     }
 
     else if (!validEmail(email)) {
         email.classList.add('invalid');
+        email.value = "";
     }
 
     else {

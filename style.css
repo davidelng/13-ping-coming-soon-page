@@ -65,6 +65,10 @@ main .email input:nth-of-type(2) {
   background-color: #4f7df3;
   color: white;
   font-weight: 600;
+  cursor: pointer;
+}
+main .email .invalid {
+  border-color: #ff5263;
 }
 main img {
   margin: 2rem 0;
