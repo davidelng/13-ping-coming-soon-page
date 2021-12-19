@@ -108,8 +108,23 @@ main {
             box-shadow: 0px 5px 7px 2px #4f7df350;
         }
 
+        input[type=submit]:hover {
+            background: hsl(223, 87%, 63%, 0.8);
+            border-color: hsl(223, 87%, 63%, 0.8);
+        }
+
         input[type=email].invalid {
             border-color: $light-red;
+        }
+
+        p.invalid {
+            display: block;
+        }
+
+        .empty, .formatting {
+            color: $light-red;
+            font-size: .7rem;
+            display: none;
         }
 
     }
@@ -132,8 +147,14 @@ footer {
             color: $blue;
             padding: .4rem;
             border-radius: 50%;
-            border: 1px solid $gray;
+            border: 1px solid #4f7df350;
             margin: .3rem;
+        }
+
+        ion-icon:hover {
+            border-color: $blue;
+            background: $blue;
+            color: white;
         }
     }
 
@@ -152,11 +173,47 @@ footer {
 }
 
 @media (min-width: 35rem) {
+    header {
+        
+        img {
+            height: 1.5rem;
+        }
+    }
+
     main {
         max-width: 40rem;
+
+        .text {
+            h1 {
+                font-size: 2.7rem;
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .email {
+            input {
+                grid-row: 1/2;
+            }
+
+            input[type=email] {
+                padding: 1rem 2rem;
+            }
+    
+            input[type=submit] {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .empty, .formatting {
+                grid-row: 2/3;
+            }
+        }
     }
 
     .email {
-        grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
+        grid-template-columns: repeat(auto-fit, minmax(9rem, auto));
     }
 }

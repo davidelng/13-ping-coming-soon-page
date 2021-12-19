@@ -1,8 +1,7 @@
-//The `input` field is empty. The message for this error should say *"Whoops! It looks like you forgot to add your email"*
-//The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Please provide a valid email address"*
-
 const email = document.querySelector('#email');
 const btn = document.querySelector('#btn');
+const emailEmpty = document.querySelector('.empty');
+const emailFormat = document.querySelector('.formatting');
 
 const validEmail = (email) => {
     let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
@@ -12,14 +11,26 @@ const validEmail = (email) => {
 btn.addEventListener('click', () => {
     if (email.value.trim() == '') {
         email.classList.add('invalid');
+        emailEmpty.classList.add('invalid');
+        setTimeout(() => {
+            email.classList.remove('invalid');
+            emailEmpty.classList.remove('invalid');
+        }, 2500);
     }
 
     else if (!validEmail(email)) {
         email.classList.add('invalid');
         email.value = "";
+        emailFormat.classList.add('invalid');
+        setTimeout(() => {
+            email.classList.remove('invalid');
+            emailFormat.classList.remove('invalid');
+        }, 2500);
     }
 
     else {
         email.classList.remove('invalid');
+        emailEmpty.classList.remove('invalid');
+        emailFormat.classList.remove('invalid');
     }
 });
