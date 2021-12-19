@@ -31,7 +31,6 @@ body {
 
 footer, main, header {
   padding: 2rem;
-  max-width: 31.25rem;
   margin: 0 auto;
 }
 
@@ -40,6 +39,7 @@ section {
 }
 
 header {
+  padding-top: 5rem;
   flex: none;
 }
 header img {
@@ -48,7 +48,11 @@ header img {
 }
 
 main {
+  padding: 0 2rem;
   flex: auto;
+}
+main .text {
+  margin-top: 0;
 }
 main .text h1 {
   font-size: 1.5rem;
@@ -63,24 +67,28 @@ main .text p {
   font-size: 0.9rem;
   margin: 1rem 0;
 }
-main .email input:nth-of-type(2), main .email input:nth-of-type(1) {
-  border-radius: 1.25rem;
-  margin: 0.5rem;
-  padding: 0.7rem;
-  font-size: 0.8rem;
+main .email {
+  display: grid;
 }
-main .email input:nth-of-type(1) {
+main .email input[type=submit], main .email input[type=email] {
+  border-radius: 1.5rem;
+  margin: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
   border: 1px solid #c2d3ff;
+}
+main .email input[type=email] {
   color: #c2d3ff;
 }
-main .email input:nth-of-type(2) {
-  border: none;
+main .email input[type=submit] {
   background-color: #4f7df3;
+  border-color: #4f7df3;
   color: white;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: 0px 5px 7px 2px #4f7df350;
 }
-main .email .invalid {
+main .email input[type=email].invalid {
   border-color: #ff5263;
 }
 main img {
@@ -93,9 +101,10 @@ footer {
 }
 footer .socials {
   text-align: center;
+  margin-bottom: 1rem;
 }
 footer .socials ion-icon {
-  color: #151f29;
+  color: #4f7df3;
   padding: 0.4rem;
   border-radius: 50%;
   border: 1px solid #969696;
@@ -111,6 +120,16 @@ footer .attribution {
 }
 footer .attribution a {
   color: #3e52a3;
+}
+
+@media (min-width: 35rem) {
+  main {
+    max-width: 40rem;
+  }
+
+  .email {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -39,7 +39,6 @@ body {
 
 %mobile-padding {
     padding: 2rem;
-    max-width: 31.25rem;
     margin: 0 auto;
 }
 
@@ -49,6 +48,7 @@ section {
 
 header {
     @extend %mobile-padding;
+    padding-top: 5rem;
     flex: none;
 
     img {
@@ -59,9 +59,11 @@ header {
 
 main {
     @extend %mobile-padding;
+    padding: 0 2rem;
     flex: auto;
 
     .text {
+        margin-top: 0;
 
         h1 {
             font-size: 1.5rem;
@@ -81,31 +83,32 @@ main {
     }
 
     .email {
+        display: grid;
 
         %input-style {
-            border-radius: 1.25rem;
+            border-radius: 1.5rem;
             margin: .5rem;
-            padding: .7rem;
-            // width: 100%;
+            padding: .8rem 2rem;
             font-size: .8rem;
+            border: 1px solid $pale-blue;
         }
 
-        input:nth-of-type(1) {
+        input[type=email] {
             @extend %input-style;
-            border: 1px solid $pale-blue;
             color: $pale-blue;
         }
 
-        input:nth-of-type(2) {
+        input[type=submit] {
             @extend %input-style;
-            border: none;
             background-color: $blue;
+            border-color: $blue;
             color: white;
             font-weight: 600;
             cursor: pointer;
+            box-shadow: 0px 5px 7px 2px #4f7df350;
         }
 
-        .invalid {
+        input[type=email].invalid {
             border-color: $light-red;
         }
 
@@ -123,9 +126,10 @@ footer {
 
     .socials {
         text-align: center;
+        margin-bottom: 1rem;
 
         ion-icon {
-            color: $very-dark-blue;
+            color: $blue;
             padding: .4rem;
             border-radius: 50%;
             border: 1px solid $gray;
@@ -144,5 +148,15 @@ footer {
 
     .attribution a { 
         color: hsl(228, 45%, 44%); 
+    }
+}
+
+@media (min-width: 35rem) {
+    main {
+        max-width: 40rem;
+    }
+
+    .email {
+        grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
     }
 }
