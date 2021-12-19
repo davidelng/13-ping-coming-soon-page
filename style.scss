@@ -6,8 +6,12 @@ $very-dark-blue: hsl(209, 33%, 12%);
 $font-stack: 'Libre Franklin', sans-serif;
 $font-size: 20px;
 
-*, *::before *::after {
+html {
     box-sizing: border-box;
+}
+
+*::before *::after {
+    box-sizing: inherit;
 }
 
 body, h1, h2, p {
@@ -29,11 +33,14 @@ body {
     font-family: $font-stack;
     color: $very-dark-blue;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-%mobile-margin {
-    margin: 2rem;
+%mobile-padding {
+    padding: 2rem;
     max-width: 31.25rem;
+    margin: 0 auto;
 }
 
 section {
@@ -41,7 +48,8 @@ section {
 }
 
 header {
-    @extend %mobile-margin;
+    @extend %mobile-padding;
+    flex: none;
 
     img {
         margin: auto;
@@ -50,7 +58,8 @@ header {
 }
 
 main {
-    @extend %mobile-margin;
+    @extend %mobile-padding;
+    flex: auto;
 
     .text {
 
@@ -108,8 +117,21 @@ main {
 }
 
 footer {
-    @extend %mobile-margin;
+    @extend %mobile-padding;
+    flex: none;
     color: $gray;
+
+    .socials {
+        text-align: center;
+
+        ion-icon {
+            color: $very-dark-blue;
+            padding: .4rem;
+            border-radius: 50%;
+            border: 1px solid $gray;
+            margin: .3rem;
+        }
+    }
 
     .copyright {
         font-size: .7rem;

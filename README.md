@@ -11,7 +11,6 @@ This is a solution to the [Ping coming soon page challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -37,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-[Solution URL]()  
-[Live site URL]()
+[Solution URL](https://github.com/davidelng/13-ping-coming-soon-page)  
+[Live site URL](https://davidelng.github.io/13-ping-coming-soon-page/)
 
 ## My process
 
@@ -54,15 +53,11 @@ Users should be able to:
 
 ### What I learned
 
-
-
-### Continued development
-
-
+Sass and Scss
 
 ### Useful resources
 
-
+[Sass Guide](https://sass-lang.com/guide)
 
 ## Author
 

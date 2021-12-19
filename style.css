@@ -1,5 +1,9 @@
-*, *::before *::after {
+html {
   box-sizing: border-box;
+}
+
+*::before *::after {
+  box-sizing: inherit;
 }
 
 body, h1, h2, p {
@@ -21,22 +25,31 @@ body {
   font-family: "Libre Franklin", sans-serif;
   color: #151f29;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 footer, main, header {
-  margin: 2rem;
+  padding: 2rem;
   max-width: 31.25rem;
+  margin: 0 auto;
 }
 
 section {
   margin: 2rem 0;
 }
 
+header {
+  flex: none;
+}
 header img {
   margin: auto;
   height: 1.2rem;
 }
 
+main {
+  flex: auto;
+}
 main .text h1 {
   font-size: 1.5rem;
   color: #969696;
@@ -75,7 +88,18 @@ main img {
 }
 
 footer {
+  flex: none;
   color: #969696;
+}
+footer .socials {
+  text-align: center;
+}
+footer .socials ion-icon {
+  color: #151f29;
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: 1px solid #969696;
+  margin: 0.3rem;
 }
 footer .copyright {
   font-size: 0.7rem;
